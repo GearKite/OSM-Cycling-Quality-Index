@@ -1,0 +1,98 @@
+<osm-script bbox="56.80716710498929,23.807647705078125,57.09027634984894,24.38731384277344" output="json" output-config="">
+  <union into="_">
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="cycleway"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="path"/>
+      <has-kv k="bicycle" modv="not" v="no"/>
+      <has-kv k="bicycle" modv="not" v="dismount"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="footway"/>
+      <has-kv k="bicycle" modv="not" v="no"/>
+      <has-kv k="bicycle" modv="not" v="dismount"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="bridleway"/>
+      <has-kv k="bicycle" modv="not" v="no"/>
+      <has-kv k="bicycle" modv="not" v="dismount"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="steps"/>
+      <has-kv k="bicycle" modv="not" v="no"/>
+      <has-kv k="bicycle" modv="not" v="dismount"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="motorway"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="motorway_link"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="trunk"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="trunk_link"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="primary"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="primary_link"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="secondary"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="secondary_link"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="tertiary"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="tertiary_link"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="unclassified"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="residential"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="living_street"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="pedestrian"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="road"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="service"/>
+      <has-kv k="service" modv="not" regv=".*"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="service"/>
+      <has-kv k="service" modv="" v="alley"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="service"/>
+      <has-kv k="bicycle" modv="" v="yes"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="service"/>
+      <has-kv k="bicycle" modv="" v="designated"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="service"/>
+      <has-kv k="bicycle" modv="" v="permissive"/>
+    </query>
+    <query into="_" type="way">
+      <has-kv k="highway" modv="" v="track"/>
+    </query>
+  </union>
+  <print e="" from="_" geometry="skeleton" ids="yes" limit="" mode="body" n="" order="id" s="" w=""/>
+  <recurse from="_" into="_" type="down"/>
+  <print e="" from="_" geometry="skeleton" ids="yes" limit="" mode="skeleton" n="" order="quadtile" s="" w=""/>
+</osm-script>
